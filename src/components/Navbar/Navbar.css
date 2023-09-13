@@ -1,9 +1,9 @@
 .navbar {
   background: #ffecec;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-
+  padding: none;
 }
 
 .Item {
@@ -21,19 +21,47 @@
   cursor: pointer;
   color: #e966a0;
 }
-.NavSearch{
-    margin-left: 10px;
-    margin-right: 10rem;
-    background-color:#F1D4E5 ;
-    border-radius: 5px;    
-    border: none;
-    font-weight: 400;
-    color: #1E1E1F;
-    height: 6vh;
-    width: 35vw;
-    padding: 2px 0px 2px 20px
-   
-    
+.NavSearch {
+  margin-left: 10px;
+  margin-right: 10rem;
+  background-color: #f1d4e5;
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+  color: #1e1e1f;
+  height: 6vh;
+  width: 35vw;
+  padding: 2px 0px 2px 20px;
+  font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+  font-size: 17px; /* Cambia el tamaño de la fuente según tus preferencias */
+  /* Otros estilos de texto, como color, alineación, etc. */
+}
 
+.container-search {
+  position: relative;
+  padding: none;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
 
+.container-search span {
+  position: absolute;
+  left: 34vw;
+}
+.container-search span:hover {
+  cursor: pointer;
+}
+
+.container-item {
+  padding: 0 0 0 10vw;
+}
+
+.Logo {
+  position: absolute;
+  left: 3vw;
+}
+
+.Logo :hover {
+  cursor: pointer;
 }
