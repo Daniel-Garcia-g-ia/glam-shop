@@ -1,0 +1,87 @@
+.footer {
+    background-color: #f1d4e5;
+    display: flex;
+}
+
+.container-social {
+    padding: 2vw 2vw 2vw 4vw;
+    width: 30%;
+}
+
+.container-social p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color:color #333333;
+}
+
+
+.container-logos {
+    display: flex;
+    align-items: space-between;
+    width: 30%;
+}
+
+.logo1 {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.logo1:hover {
+    cursor: pointer;
+}
+
+.logo2 {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.logo2:hover {
+    cursor: pointer;
+}
+
+.logo3 {
+    max-width: 120px;
+    max-height: 80px;
+}
+
+.logo3:hover {
+    cursor: pointer;
+}
+
+.logo4 {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.logo4:hover {
+    cursor: pointer;
+}
+
+
+/* Container Explora */
+.container-explore {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color:color #333333;
+    display: flex;
+    align-items: space-between;
+    
+    padding: 2vw 20vw 2vw 10vw;
+
+}
+.container-item{
+    padding:0 8vw;
+}
+.item {
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.item li{
+    padding: 2vh;
+    color: #333333;
+}
+.item li:hover{
+    cursor:pointer;
+    color:black;
+}

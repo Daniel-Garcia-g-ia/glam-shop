@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 
  function AppUI(){
 
@@ -7,7 +8,9 @@ import Navbar from "../components/Navbar";
         <>
         <Navbar />
 
-       
+
+
+        <Footer />       
         </>
 
     )
