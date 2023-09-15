@@ -12,9 +12,3 @@ body {
     min-height: 100vh;
   }
 
-  footer{
-    position: fixed; /* Fija el footer en la ventana gráfica. */
-    bottom: 0; /* Lo coloca en la parte inferior de la ventana gráfica. */
-    left: 0;
-    right: 0;
-  }

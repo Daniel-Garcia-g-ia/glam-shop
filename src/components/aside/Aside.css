@@ -1,0 +1,13 @@
+.aside {
+    padding-top: 10vh;
+    display: grid;
+    justify-content: center;
+}
+
+.container-card{  
+    position: relative;
+    width: auto;
+   
+
+    
+}
