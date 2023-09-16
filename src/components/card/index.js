@@ -7,7 +7,7 @@ function Card() {
 
     return (
         <>
-            <div className="width bg box my-6 media is-hover" >
+            <div className="bg box my-6 media is-hover" >
                 <div class="image-container">
                     <img src={Imagen} alt="Product Image" />
                 </div>

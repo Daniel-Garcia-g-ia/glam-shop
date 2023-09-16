@@ -7,8 +7,10 @@ function Aside()  {
       <div className="container is-max-desktop">
         <div className="columns is-centered">
           <div className="column">
-            <div className="is-flex is-justify-content-center">
+            <div className="">
               <Card />
+             
+
             </div>
           </div>
         </div>
