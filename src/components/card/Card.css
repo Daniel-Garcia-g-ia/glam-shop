@@ -36,6 +36,20 @@
 
 }
 
+.image-container-mobile img {
+    /* border-radius: 10px; */
+    max-width: auto;
+    max-height: auto;
+    /* width: auto;
+    height: auto; */
+    box-shadow: 4px 6px 12px #f1d4e5;
+
+}
+
+.is-padding{
+    padding-left: 1vw;
+}
+
 /* .image{
     position: relative;
     box-shadow: 4px 6px 12px #f1d4e5;
@@ -45,6 +59,25 @@
     min-width: 13rem;
     min-height:13rem ;
 } */
+
+.is-container-button-mobile {
+    position: relative;
+}
+
+.is-container-button-mobile span {
+    position: absolute;
+    right: 8px;
+    top: 5px
+}
+
+.is-container-button-mobile button {
+    width: 100%;
+    
+}
+
+
+
+
 
 .is-container-button {
     position: relative;
@@ -96,3 +129,4 @@
     /* Agrega una sombra suave */
 
 }
+

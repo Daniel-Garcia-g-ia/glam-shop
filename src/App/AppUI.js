@@ -3,17 +3,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
 import Aside from "../components/aside"
 
- function AppUI(){
+function AppUI() {
 
-    return(
+    return (
         <>
-        <Navbar />
-        
-        <Aside />
-
-        <Footer />       
+            <Navbar />
+            <Aside />
+            <Footer />
         </>
 
     )
- }
+}
 export default AppUI;

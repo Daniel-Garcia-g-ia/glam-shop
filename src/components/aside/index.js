@@ -4,11 +4,16 @@ import Card from "../card"
 
 function Aside()  {
     return (
-      <div className="container is-max-desktop">
-        <div className="columns is-centered">
-          <div className="column">
-            <div className="">
+      <div className="container py-6 ">
+        <div className="columns is-centered  has-text-centered-mobile">
+          <div className="column  is-two-thirds-tablet is-full-mobile ">
+            <div className="is-mobile mx-6">
               <Card />
+              <Card />
+              <Card />
+              <Card />
+            
+              
              
 
             </div>

@@ -1,29 +1,74 @@
 import React from "react";
 import Logo from "./logo";
+import "./Navbar.css"
 import { HiSearch } from "react-icons/hi";
 
-import "./Navbar.css";
 
 function Navbar() {
   return (
     <>
-      <nav className="navbar">
-        <div className="Logo">
-          <Logo width={130} height={130} />
+      <nav class="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <Logo width={120} heigth={50} fill="#C780FA" />
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
 
-        <div className="container-item">
-          <ul className="Item">
-            <li>Home</li>
-            <li>Products</li>
-            <li>About</li>
-            <li>Pricing</li>
-          </ul>
-        </div>
-        <div className="container-search">
-          
-          <input className="NavSearch" placeholder="Busca productos y mas" />
-          <span>{<HiSearch size={24}/>}</span>
+        <div id="navbarBasic" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item custom-navbar-item">
+              Home
+            </a>
+
+            <a class="navbar-item">
+              Contacto
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Productos
+              </a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Maquillaje
+                </a>
+                <a class="navbar-item">
+                  Sombras
+                </a>
+                <a class="navbar-item">
+                  Promociones
+                </a>
+                <hr class="navbar-divider" />
+                <a class="navbar-item">
+                  Sorpresas
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="navbar-end">
+            <div className="navbar-item" >
+              <input class="input is-normal is-rounded custom-input" type="text" placeholder="Busque Producto y mas..." />
+
+              <span>
+                <HiSearch size={28} />
+              </span>
+
+            </div>
+
+
+
+          </div>
+
+
+
         </div>
       </nav>
     </>
