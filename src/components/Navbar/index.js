@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./logo";
 import "./Navbar.css"
 import { HiSearch } from "react-icons/hi";
+import { BsFillCartCheckFill } from "react-icons/bs"
 
 
 function Navbar() {
@@ -61,6 +62,14 @@ function Navbar() {
                 <HiSearch size={28} />
               </span>
 
+            </div>
+            <div className="navbar-item">
+              
+              <div className="shoping-car icon is-medium mr-3">
+                <BsFillCartCheckFill size={30}/>
+                <span>1</span>
+
+              </div>
             </div>
 
 

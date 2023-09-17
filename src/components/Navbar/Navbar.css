@@ -35,3 +35,18 @@
     position: absolute;
     left: 0;
 }
+
+.shoping-car{
+    position: relative;
+}
+.shoping-car span{
+    top:-14px;
+    right: -10px;
+    color: white;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #C780FA;
+    position: absolute;
+}
