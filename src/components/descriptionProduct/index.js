@@ -11,7 +11,6 @@ function DescriptionProduct({ handleClose }) {
 
     return (
         <>
-
             <div className="is-hidden-mobile">
                 <div className="modal-container-modal pt-6"  >
                     <div className=" box container media is-max-widescreen">
@@ -23,7 +22,6 @@ function DescriptionProduct({ handleClose }) {
                             <p className="subtitle pb-5">
                                 descripcion detallada del poducto, por ejemplo: frase de ventas o marca, uso, color, etc... hasta cierta cantidad de caracteres
                             </p>
-
                             <p className="has-text-dark is-size-3 pb-5">$xxx.xxx</p>
                             <div className="mt-5 is-container-button-modal">
                                 <button className="button bg-button-modal"  >Agregar al Carrito </button>
@@ -33,57 +31,37 @@ function DescriptionProduct({ handleClose }) {
                             </div>
                         </div>
                         <div>
-
                             <RiCloseCircleLine size={40} onClick={handleClose} />
-
                         </div>
-
                     </div>
                 </div>
             </div>
 
             <div className="is-hidden-tablet">
-
-
                 <div className="modal-container-modal">
                     <div className="box container mx-3 box-mobile">
                         <div className="container-close-mobile">
                             <RiCloseCircleLine size={40} onClick={handleClose} />
                         </div>
-
                         <p className="has-text-dark is-size-4 pb-5">Titulo del Producto</p>
                         <div class="image-container-modal-mobile">
                             <img src={Imagen} alt="Product Image" />
                         </div>
                         <div className="pt-2">
-
-                            <p className="subtitle pb-2">
+                            <p className="subtitle pb-1">
                                 descripcion detallada del poducto, por ejemplo: frase de ventas o marca, uso, color, etc... hasta cierta cantidad de caracteres
                             </p>
-
-                            <p className="has-text-dark is-size-2 pb-2">$xxx.xxx</p>
-                            <div className="mt-5 is-container-button-modal-mobile">
+                            <p className="has-text-dark is-size-2 pb-1">$xxx.xxx</p>
+                            <div className="mt-2 is-container-button-modal-mobile">
                                 <button className="button bg-button-modal"  >Agregar al Carrito </button>
                             </div>
-                            <div className="mt-5 is-container-button-modal-mobile">
+                            <div className="mt-2 is-container-button-modal-mobile">
                                 <button className="button bg-button-modal-buy"  >Comprar ahora </button>
                             </div>
                         </div>
-
-
-
                     </div>
-
-
-
                 </div>
-
-
-
-
             </div>
-
-
         </>
     )
 
