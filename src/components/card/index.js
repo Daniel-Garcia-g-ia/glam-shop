@@ -6,14 +6,10 @@ import { BsFillCartPlusFill } from "react-icons/bs"
 import "./Card.css"
 import ProductDescription from "../ProductDescription";
 import { openModal, closeModal } from "../ProductDescription/modal"
-import { useState } from "react";
 
 function Card() {
 
     const [VisibleModal, setVisibleModal] = useState(false)
-
-
-
 
     const handleClickCard = () => {
         setVisibleModal(state => !state)
@@ -26,12 +22,7 @@ function Card() {
         <>
 
             {VisibleModal && (<DescriptionProduct handleClose={handleClickCard} />
-
-
             )}
-
-
-
             <div className="is-hidden-mobile" onClick={handleClickCard}>
                 <div className="bg box my-6 media is-hover is-two-thirds-tablet"  >
                     <div class="image-container">
@@ -53,7 +44,11 @@ function Card() {
                     </div>
                 </div >
             </div>
-            <div className="is-hidden-tablet px-4">
+
+            
+
+
+            <div className="is-hidden-tablet px-4" onClick={handleClickCard}>
 
                 <div className="bg box my-6 is-hover" >
                     <div className="container">

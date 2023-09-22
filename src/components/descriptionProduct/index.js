@@ -42,6 +42,47 @@ function DescriptionProduct({ handleClose }) {
                 </div>
             </div>
 
+            <div className="is-hidden-tablet">
+
+
+                <div className="modal-container-modal">
+                    <div className="box container mx-3 box-mobile">
+                        <div className="container-close-mobile">
+                            <RiCloseCircleLine size={40} onClick={handleClose} />
+                        </div>
+
+                        <p className="has-text-dark is-size-4 pb-5">Titulo del Producto</p>
+                        <div class="image-container-modal-mobile">
+                            <img src={Imagen} alt="Product Image" />
+                        </div>
+                        <div className="pt-2">
+
+                            <p className="subtitle pb-2">
+                                descripcion detallada del poducto, por ejemplo: frase de ventas o marca, uso, color, etc... hasta cierta cantidad de caracteres
+                            </p>
+
+                            <p className="has-text-dark is-size-2 pb-2">$xxx.xxx</p>
+                            <div className="mt-5 is-container-button-modal-mobile">
+                                <button className="button bg-button-modal"  >Agregar al Carrito </button>
+                            </div>
+                            <div className="mt-5 is-container-button-modal-mobile">
+                                <button className="button bg-button-modal-buy"  >Comprar ahora </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
 
         </>
     )
