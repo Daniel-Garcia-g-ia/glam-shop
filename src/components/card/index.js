@@ -1,5 +1,7 @@
 import React from "react";
 import Imagen from "../../assets/images/editada.webp";
+import DescriptionProduct from "../descriptionProduct";
+import { useState } from "react";
 import { BsFillCartPlusFill } from "react-icons/bs"
 import "./Card.css"
 import ProductDescription from "../ProductDescription";
@@ -8,30 +10,29 @@ import { useState } from "react";
 
 function Card() {
 
-    const [modalVisible, setModlaVisible] = useState(false);
+    const [VisibleModal, setVisibleModal] = useState(false)
 
-    const handleCardClick = () => {
-        setModlaVisible(state => !state);
 
+
+
+    const handleClickCard = () => {
+        setVisibleModal(state => !state)
 
     }
 
-
-
-
-
-
     return (
+
+
         <>
 
+            {VisibleModal && (<DescriptionProduct handleClose={handleClickCard} />
+
+
+            )}
 
 
 
-            
-            <div className="is-hidden-mobile" onClick={handleCardClick} >
-
-                {modalVisible && (<ProductDescription />)}
-
+            <div className="is-hidden-mobile" onClick={handleClickCard}>
                 <div className="bg box my-6 media is-hover is-two-thirds-tablet"  >
                     <div class="image-container">
                         <img src={Imagen} alt="Product Image" />

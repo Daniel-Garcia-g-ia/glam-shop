@@ -1,0 +1,54 @@
+.modal-container-modal{
+    background-color: rgba(32,35,41,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 1s, transform 0.3s;
+  }
+
+
+  .box{
+    background-color: #f1d4e5;
+    margin: 0 10px 0 10px;
+  }
+  .image-container-modal img {
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 500px;
+    /* width: auto;
+    height: auto; */
+    box-shadow: 4px 6px 12px #f1d4e5;
+
+}
+.is-container-button-modal {
+    position: relative;
+}
+
+.is-container-button-modal span {
+    position: absolute;
+    left: 15vw;
+    top: 5px
+}
+
+.is-container-button-modal button {
+    width: 25vw;
+    border-radius: 17px;
+    
+    
+}
+
+.bg-button-modal {
+    background-color: #e8e3ec;
+    color: black;
+}
+
+.bg-button-modal-buy {
+    background-color: #C780FA;
+    color: white;
+}
