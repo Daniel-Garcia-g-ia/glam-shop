@@ -1,13 +1,29 @@
 import React from "react";
 import Logo from "./logo";
-import "./Navbar.css"
+import Order from "../Order";
+import { useState } from "react";
+
 import { HiSearch } from "react-icons/hi";
 import { BsFillCartCheckFill } from "react-icons/bs"
 
+import "./Navbar.css"
+
 
 function Navbar() {
+
+  const [openOrder, setOpenOrder]=useState(false);
+
+  const handleClickOrder=()=>{
+    setOpenOrder (state =>!state)    
+  }
+
+
+
   return (
     <>
+
+      
+
       <nav class="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
@@ -63,12 +79,10 @@ function Navbar() {
               </span>
 
             </div>
-            <div className="navbar-item">
-              
-              <div className="shoping-car icon is-medium mr-3">
+            <div className="navbar-item">              
+              <div className="shoping-car icon is-medium mr-3" onClick={handleClickOrder}>
                 <BsFillCartCheckFill size={30}/>
                 <span>1</span>
-
               </div>
             </div>
 
@@ -79,7 +93,9 @@ function Navbar() {
 
 
         </div>
+        
       </nav>
+      {openOrder && (<Order handleClickOrder={handleClickOrder} />)}
     </>
   );
 }

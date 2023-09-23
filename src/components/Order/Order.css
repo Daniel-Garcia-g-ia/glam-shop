@@ -1,0 +1,44 @@
+.modal-conatiner-desktop{
+    background-color: rgba(32,35,41,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image-container-modal-order{
+   /*  z-index: 3; */
+    border-radius: 10px;
+    max-width: 100px;
+    max-height: 127px;
+    /* width: auto;
+    height: auto; */
+    box-shadow: 4px 6px 12px #f1d4e5;
+}
+
+.box-container{
+    top:4vh;
+    
+
+}
+
+.summary-products{
+    max-width: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    
+}
+.is-fixed{
+    position: fixed;
+    
+}
+.is-position{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}

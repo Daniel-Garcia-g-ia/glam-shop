@@ -4,8 +4,8 @@ import DescriptionProduct from "../descriptionProduct";
 import { useState } from "react";
 import { BsFillCartPlusFill } from "react-icons/bs"
 import "./Card.css"
-import ProductDescription from "../ProductDescription";
-import { openModal, closeModal } from "../ProductDescription/modal"
+
+
 
 function Card() {
 
