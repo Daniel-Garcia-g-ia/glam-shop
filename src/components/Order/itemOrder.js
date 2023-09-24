@@ -6,7 +6,7 @@ function ItemOrder() {
     return (
         <>
 
-            <div className="is-hidden-mobile ">
+            <div className=" ">
                 <div className="bg box my-1 media is-hover"  >
                     <div class="image-container-modal-order">
                         <img src={Imagen} alt="Product Image" />

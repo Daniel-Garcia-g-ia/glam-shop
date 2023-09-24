@@ -11,10 +11,11 @@ import "./Navbar.css"
 
 function Navbar() {
 
-  const [openOrder, setOpenOrder]=useState(false);
+  const [openOrder, setOpenOrder] = useState(false);
 
-  const handleClickOrder=()=>{
-    setOpenOrder (state =>!state)    
+  const handleClickOrder = () => {
+    setOpenOrder(state => !state)
+
   }
 
 
@@ -22,20 +23,30 @@ function Navbar() {
   return (
     <>
 
-      
+      <div id="shopping" className={`is-hidden-desktop  ${openOrder ? 'visible' : ''} `}>
+        <div className="shoping-car-mobile is-medium mr-3" onClick={handleClickOrder}>
+          <BsFillCartCheckFill size={50} />
+          <span>1</span>
+        </div>
+      </div>
 
       <nav class="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
+
         <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <Logo width={120} heigth={50} fill="#C780FA" />
+          <a class="navbar-item pb-0" href="#">
+            <Logo width={120} heigth={40} fill="#C780FA" />
           </a>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
+
           </a>
+
         </div>
+
+
 
         <div id="navbarBasic" class="navbar-menu">
           <div class="navbar-start">
@@ -79,21 +90,18 @@ function Navbar() {
               </span>
 
             </div>
-            <div className="navbar-item">              
+            <div className="navbar-item">
               <div className="shoping-car icon is-medium mr-3" onClick={handleClickOrder}>
-                <BsFillCartCheckFill size={30}/>
+                <BsFillCartCheckFill size={30} />
                 <span>1</span>
               </div>
             </div>
-
-
-
           </div>
 
 
 
         </div>
-        
+
       </nav>
       {openOrder && (<Order handleClickOrder={handleClickOrder} />)}
     </>
