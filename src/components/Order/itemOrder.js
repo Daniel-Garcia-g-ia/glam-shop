@@ -8,7 +8,7 @@ function ItemOrder() {
 
             <div className=" ">
                 <div className="bg box my-1 media is-hover"  >
-                    <div class="image-container-modal-order">
+                    <div className="image-container-modal-order">
                         <img src={Imagen} alt="Product Image" />
                     </div>
                     <div className="ml-3 media-content">

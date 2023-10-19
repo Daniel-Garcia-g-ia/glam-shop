@@ -30,14 +30,14 @@ function Navbar() {
         </div>
       </div>
 
-      <nav class="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
+      <nav className="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
 
-        <div class="navbar-brand">
-          <a class="navbar-item pb-0" href="#">
+        <div className="navbar-brand">
+          <a className="navbar-item pb-0" href="#">
             <Logo width={120} heigth={40} fill="#C780FA" />
           </a>
 
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -48,33 +48,33 @@ function Navbar() {
 
 
 
-        <div id="navbarBasic" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item custom-navbar-item">
+        <div id="navbarBasic" className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item custom-navbar-item">
               Home
             </a>
 
-            <a class="navbar-item">
+            <a className="navbar-item">
               Contacto
             </a>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link">
                 Productos
               </a>
 
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
+              <div className="navbar-dropdown">
+                <a className="navbar-item">
                   Maquillaje
                 </a>
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Sombras
                 </a>
-                <a class="navbar-item">
+                <a className="navbar-item">
                   Promociones
                 </a>
-                <hr class="navbar-divider" />
-                <a class="navbar-item">
+                <hr className="navbar-divider" />
+                <a className="navbar-item">
                   Sorpresas
                 </a>
               </div>
@@ -83,7 +83,7 @@ function Navbar() {
 
           <div className="navbar-end">
             <div className="navbar-item" >
-              <input class="input is-normal is-rounded custom-input" type="text" placeholder="Busque Producto y mas..." />
+              <input className="input is-normal is-rounded custom-input" type="text" placeholder="Busque Producto y mas..." />
 
               <span>
                 <HiSearch size={28} />

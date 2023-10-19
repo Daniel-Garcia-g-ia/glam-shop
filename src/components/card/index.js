@@ -7,7 +7,7 @@ import "./Card.css"
 
 
 
-function Card() {
+function Card({product}) {
 
     const [VisibleModal, setVisibleModal] = useState(false)
 
@@ -21,19 +21,20 @@ function Card() {
 
         <>
 
-            {VisibleModal && (<DescriptionProduct handleClose={handleClickCard} />
+            {VisibleModal && (<DescriptionProduct handleClose={handleClickCard} product={product} />
             )}
             <div className="is-hidden-mobile" onClick={handleClickCard}>
                 <div className="bg box my-6 media is-hover is-two-thirds-tablet"  >
-                    <div class="image-container">
-                        <img src={Imagen} alt="Product Image" />
+                    <div className="image-container">
+                        <img src={product.fileUrl} alt="Product Image" />
+                        <h1>{product.fileUrl}</h1>
                     </div>
                     <div className="px-6 py-4 ">
                         <p className="is-size-5">
-                            ✨Gran Combo! Regalo
+                           {product.title}
                         </p>
                         <div className="px-2 pt-6">
-                            <span className="has-text-dark is-size-3" >$10.000</span>
+                            <span className="has-text-dark is-size-3" >${product.price}</span>
                         </div>
 
                         <div className="mt-5 is-container-button">
@@ -54,7 +55,7 @@ function Card() {
                     <div className="container">
                         <div className="columns is-centered">
                             <div className="column is-flex is-justify-content-center is-align-items-center">
-                                <div class="image-container-mobile ">
+                                <div className="image-container-mobile ">
                                     <img src={Imagen} alt="Product Image" />
                                 </div>
                             </div>
@@ -63,10 +64,10 @@ function Card() {
 
                     </div>
                     <p className="is-size-5 py-5">
-                        ✨Gran Combo! Regalo
+                        {product.title}
                     </p>
                     <div className="px-2">
-                        <span className="has-text-dark is-size-3" >$10.000</span>
+                        <span className="has-text-dark is-size-3" >${product.price}</span>
                     </div>
                     <div className="mt-5 is-container-button-mobile">
                         <button className="button bg-button"  >Agregar al Carrito </button>
