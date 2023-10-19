@@ -1,10 +1,8 @@
 import React from "react";
 import "./descriptionProduct.css"
 import Imagen from "../../assets/images/editada.webp";
-import { BsFillCartPlusFill } from "react-icons/bs"
-import { PiMoneyBold } from "react-icons/pi"
-import { GrClose } from "react-icons/gr"
-import { RiCloseCircleLine } from "react-icons/ri"
+
+import { RiCloseCircleLine } from "react-icons/ri" ;
 
 
 function DescriptionProduct({ handleClose, product }) {
@@ -14,8 +12,8 @@ function DescriptionProduct({ handleClose, product }) {
             <div className="is-hidden-mobile">
                 <div className="modal-container-modal pt-6"  >
                     <div className=" box container media is-max-widescreen">
-                        <div class="image-container-modal">
-                            <img src={Imagen} alt="Product Image" />
+                        <div className="image-container-modal">
+                            <img src={Imagen} alt="Product" />
                         </div>
                         <div className=" box card py-5 px-6">
                             <p className="title pb-5">{product.title}</p>
@@ -44,8 +42,8 @@ function DescriptionProduct({ handleClose, product }) {
                             <RiCloseCircleLine size={40} onClick={handleClose} />
                         </div>
                         <p className="has-text-dark is-size-4 pb-5">{product.title}</p>
-                        <div class="image-container-modal-mobile">
-                            <img src={Imagen} alt="Product Image" />
+                        <div className="image-container-modal-mobile">
+                            <img src={`http://localhost:3000/app/${product.fileUrl}`} alt="Product" />
                         </div>
                         <div className="pt-2">
                             <p className="subtitle pb-1">
