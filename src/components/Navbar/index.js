@@ -1,7 +1,11 @@
 import React from "react";
 import Logo from "./logo";
 import Order from "../Order";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {getFromLocalStorage} from "../services/localStorage"
+import { useSharedValue } from "../../contexts/products";
+
+
 
 import { HiSearch } from "react-icons/hi";
 import { BsFillCartCheckFill } from "react-icons/bs"
@@ -12,12 +16,38 @@ import "./Navbar.css"
 function Navbar() {
 
   const [openOrder, setOpenOrder] = useState(false);
+  const [amountProducts, setAmountProducts] = useState(0);
+  const {setSharedValue} = useSharedValue()
+  const {sharedValue}= useSharedValue()
+  
+  useEffect(()=>{
+    if(sharedValue){
+      setAmountProducts(sharedValue.length)           
+    }else{
+      getFromLocalStorage('Productos').then((data) => {        
+        setSharedValue(data)
 
-  const handleClickOrder = () => {
-    setOpenOrder(state => !state)
+    }).catch(e => {
+        console.error('Error al obtener prodctos', e)
+    })
+    } 
 
+
+  },[sharedValue]) 
+
+
+
+  const openModal = () => {
+    setOpenOrder(true)
+  }
+  const closeModal = () => {
+    setOpenOrder(false)
   }
 
+  const handleClickOrder = () => {
+    
+    openModal()
+  }
 
 
   return (
@@ -93,7 +123,7 @@ function Navbar() {
             <div className="navbar-item">
               <div className="shoping-car icon is-medium mr-3" onClick={handleClickOrder}>
                 <BsFillCartCheckFill size={30} />
-                <span>1</span>
+                <span>{amountProducts}</span>
               </div>
             </div>
           </div>
@@ -103,7 +133,7 @@ function Navbar() {
         </div>
 
       </nav>
-      {openOrder && (<Order handleClickOrder={handleClickOrder} />)}
+      {openOrder && (<Order closeModal={closeModal} />)}
     </>
   );
 }

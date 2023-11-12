@@ -1,8 +1,11 @@
 import React from "react";
 import Imagen from "../../assets/images/editada.webp";
 import DescriptionProduct from "../descriptionProduct";
+import { addTolocalStorage, getFromLocalStorage } from "../services/localStorage";
 import { useState } from "react";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import { alertSuccess } from "../services/alerts";
+import { useSharedValue } from "../../contexts/products";
 
 import "./Card.css";
 
@@ -11,15 +14,31 @@ import "./Card.css";
 function Card({ product }) {
 
     const [VisibleModal, setVisibleModal] = useState(false)
+    const { setSharedValue } = useSharedValue()
+
+
 
     const handleClickCard = () => {
         setVisibleModal(state => !state)
 
     }
 
-    const handleClickAddCar =()=>{
+    const handleClickAddCar = () => {
         setVisibleModal(state => !state)
-        console.log('click')
+
+        addTolocalStorage('Productos', product)
+            .then((message) => {
+                
+                getFromLocalStorage('Productos').then((data) => {
+                    setSharedValue(data)
+                    alertSuccess(message)                    
+                })                
+
+            }).catch(error => {
+                console.error(error)
+            })
+
+       
     }
 
     return (

@@ -72,3 +72,10 @@
     right: 11px;
 
 }
+.delete-product{
+    text-decoration:underline;
+    color: blue;
+}
+.delete-product:hover{
+    color: black;
+}

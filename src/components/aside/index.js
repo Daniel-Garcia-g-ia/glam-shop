@@ -5,7 +5,12 @@ import getProducts from "../services/getProducts"
 
 
 
+
+
+
 function Aside() {
+
+
 
   const [products, setProducts] = useState([])
 
@@ -15,7 +20,7 @@ function Aside() {
       try {
         const fetchedProducts = await getProducts();
         setProducts(fetchedProducts);
-        console.log(products)
+        
       } catch (error) {
         console.error('Error al obtener productos', error);
       }

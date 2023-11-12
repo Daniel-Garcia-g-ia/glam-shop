@@ -2,7 +2,14 @@ import React from "react";
 import "./Order.css"
 import Imagen from "../../assets/images/editada.webp";
 
-function ItemOrder() {
+
+function ItemOrder({ title, price, index, deleteItem }) {
+    const handleClick = () => {
+        
+       deleteItem(index)
+                
+    }
+
     return (
         <>
 
@@ -14,16 +21,21 @@ function ItemOrder() {
                     <div className="ml-3 media-content">
                         <div className="content">
                             <p>
-                                <strong>Nombre del articulo</strong>
+                                <strong>{title}</strong>
                             </p>
                             <div className="pb-2 pt-2">
-                                <span className="has-text-dark is-size-5" >Precio: $10.000</span>
+                                <span className="has-text-dark is-size-5" >Precio: ${price}</span>
                             </div>
                             <p className="pt-4">
-                                <small>Cantidad: xx </small>                                
+                                <small>Cantidad: 01 </small>
                             </p>
+
+
                         </div>
                     </div>
+                    <p className="delete-product" onClick={handleClick}>
+                        <small>Eliminar producto</small>
+                    </p>
                 </div >
             </div>
 
