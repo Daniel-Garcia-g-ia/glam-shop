@@ -60,14 +60,14 @@ function Order({ closeModal }) {
                 <div className="modal-conatiner-desktop">
                     <div className="columns box container is-max-desktop box-container">
 
-                        <div className="column  summary-products pr-6">
-                            <div className="">
+                        <div className="column summary-products pr-6">
+                            <div className="">                           
 
                                 {cart ? (products.map((product, index) => (
-                                    <ItemOrder key={index} title={product.title} price={product.price} index={index}
+                                    <ItemOrder key={index} title={product.title} fileUrl={product.fileUrl} price={product.price} index={index}
                                         deleteItem={deleteItem} />
                                 ))
-                                ) : (<p>Carrito vacio</p>)
+                                ) : ( <p>Sin productos</p> )
                                 }
 
                             </div>
@@ -112,10 +112,12 @@ function Order({ closeModal }) {
                         </div>
                         <div className="summary-products-mobile mb-4 mt-5">
                             <div className="">
-                                <ItemOrder />
-                                <ItemOrder />
-                                <ItemOrder />
-                                <ItemOrder />
+                                {cart ? (products.map((product, index) => (
+                                    <ItemOrder key={index} title={product.title} fileUrl={product.fileUrl} price={product.price} index={index}
+                                        deleteItem={deleteItem} />
+                                ))
+                                ) : ( <p>Sin producto</p> )
+                                }
 
                             </div>
 
@@ -130,11 +132,11 @@ function Order({ closeModal }) {
                                     <div className="content">
                                         <div className="is-flex is-justify-content-space-between mb-2 mt-2">
                                             <p>Productos</p>
-                                            <p>$xxx.xxx</p>
+                                            <p>${priceTotal}</p>
                                         </div>
                                         <div className="is-flex is-justify-content-space-between pt-2">
                                             <p className="has-text-black is-size-5">Total</p>
-                                            <p className="has-text-black is-size-5">$xxx.xxx</p>
+                                            <p className="has-text-black is-size-5">${priceTotal}</p>
                                         </div>
                                         <div className="mt-5 button-mobile-buy ">
                                             <button className="button bg-button-modal-buy"  >Comprar ahora </button>

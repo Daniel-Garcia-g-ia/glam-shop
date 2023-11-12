@@ -27,8 +27,7 @@ function Card({ product }) {
         setVisibleModal(state => !state)
 
         addTolocalStorage('Productos', product)
-            .then((message) => {
-                
+            .then((message) => {                
                 getFromLocalStorage('Productos').then((data) => {
                     setSharedValue(data)
                     alertSuccess(message)                    
@@ -82,7 +81,7 @@ function Card({ product }) {
                         <div className="columns is-centered">
                             <div className="column is-flex is-justify-content-center is-align-items-center">
                                 <div className="image-container-mobile ">
-                                    <img src={Imagen} alt="Product" />
+                                    <img src={`http://localhost:3000/app/${product.fileUrl}`} alt="Product" />
                                 </div>
                             </div>
 
@@ -96,8 +95,8 @@ function Card({ product }) {
                         <span className="has-text-dark is-size-3" >${product.price}</span>
                     </div>
                     <div className="mt-5 is-container-button-mobile">
-                        <button className="button bg-button"  >Agregar al Carrito </button>
-                        <span><BsFillCartPlusFill size={30} /></span>
+                        <button className="button bg-button" onClick={handleClickAddCar} >Agregar al Carrito </button>
+                        <span onClick={handleClickAddCar}><BsFillCartPlusFill size={30} /></span>
                     </div>
 
                 </div>

@@ -56,7 +56,7 @@ function Navbar() {
       <div id="shopping" className={`is-hidden-desktop  ${openOrder ? 'visible' : ''} `}>
         <div className="shoping-car-mobile is-medium mr-3" onClick={handleClickOrder}>
           <BsFillCartCheckFill size={50} />
-          <span>1</span>
+          <span>{amountProducts}</span>
         </div>
       </div>
 
@@ -98,10 +98,10 @@ function Navbar() {
                   Maquillaje
                 </a>
                 <a className="navbar-item">
-                  Sombras
+                  Pijamas
                 </a>
                 <a className="navbar-item">
-                  Promociones
+                  Hogar
                 </a>
                 <hr className="navbar-divider" />
                 <a className="navbar-item">

@@ -3,7 +3,7 @@ import "./Order.css"
 import Imagen from "../../assets/images/editada.webp";
 
 
-function ItemOrder({ title, price, index, deleteItem }) {
+function ItemOrder({ title, fileUrl, price, index, deleteItem }) {
     const handleClick = () => {
         
        deleteItem(index)
@@ -16,7 +16,7 @@ function ItemOrder({ title, price, index, deleteItem }) {
             <div className=" ">
                 <div className="bg box my-1 media is-hover"  >
                     <div className="image-container-modal-order">
-                        <img src={Imagen} alt="Product Image" />
+                        <img src={`http://localhost:3000/app/${fileUrl}`} alt="Product Image" />
                     </div>
                     <div className="ml-3 media-content">
                         <div className="content">
