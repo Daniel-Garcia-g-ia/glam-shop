@@ -1,5 +1,4 @@
 import React from "react";
-import Imagen from "../../assets/images/editada.webp";
 import DescriptionProduct from "../descriptionProduct";
 import { addTolocalStorage, getFromLocalStorage } from "../services/localStorage";
 import { useState } from "react";

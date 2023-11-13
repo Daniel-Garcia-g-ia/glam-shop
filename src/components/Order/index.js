@@ -90,7 +90,7 @@ function Order({ closeModal }) {
                                         </div>
 
                                         <div className="mt-5 is-container-button">
-                                            <button className="button bg-button-modal-buy " >Continuar Compra</button>
+                                            <button className="button bg-button-modal-buy " >Comprar ahora</button>
                                         </div>
                                     </div>
                                 </div>

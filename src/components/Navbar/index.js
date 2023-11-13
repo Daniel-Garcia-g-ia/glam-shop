@@ -63,7 +63,7 @@ function Navbar() {
       <nav className="is-bg-navbar navbar is-fixed-top  " role="navigation" aria-label="main navigation">
 
         <div className="navbar-brand">
-          <a className="navbar-item pb-0" href="#">
+          <a className="navbar-item pb-0" href="/">
             <Logo width={120} heigth={40} fill="#C780FA" />
           </a>
 
