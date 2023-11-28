@@ -1,6 +1,6 @@
 import React from "react";
 import "./Order.css"
-import Imagen from "../../assets/images/editada.webp";
+
 
 
 function ItemOrder({ title, fileUrl, price, index, deleteItem }) {

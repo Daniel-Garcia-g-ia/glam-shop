@@ -1,0 +1,67 @@
+.bg-color {
+    position: relative;
+    /*  background-color: red; */
+}
+
+.data-location span {
+    position: absolute;
+    top: 0px;
+    left: -19px;
+
+}
+
+.add-address {
+    position: absolute;
+    top: 6px;
+    right: 9px;
+}
+
+.add-address small {
+    color: brown;
+
+}
+
+.add-address small:hover {
+    cursor: pointer;
+
+}
+
+.info-address {
+    padding-top: 0px;
+    margin-top: 0px;
+
+}
+
+.box-buy {
+    background-color: #FFECEC;
+    border-radius: none;
+    border-bottom-style: groove;
+
+}
+
+.active {
+    display: block;
+}
+
+.disable {
+    display: none;
+}
+
+.background-modal {
+    background-color: rgba(32, 35, 41, .8);
+    z-index: 1;
+
+}
+
+.w-5 {
+    width: 50%;
+}
+
+.button-address {
+    width: auto;
+    padding: 0 2vw 0 2vw;
+    margin: 3vh 0 5vh 0;
+    background-color: #C780FA;
+    color: aliceblue;
+    border-radius: 20px;
+}

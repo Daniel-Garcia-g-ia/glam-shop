@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { getFromLocalStorage, deleteToLocalStorage } from '../services/localStorage'
 import { useSharedValue } from "../../contexts/products";
+import { Link } from "react-router-dom";
 
 
 import "./Order.css"
+
 
 
 function Order({ closeModal }) {
@@ -61,13 +63,13 @@ function Order({ closeModal }) {
                     <div className="columns box container is-max-desktop box-container">
 
                         <div className="column summary-products pr-6">
-                            <div className="">                           
+                            <div className="">
 
                                 {cart ? (products.map((product, index) => (
                                     <ItemOrder key={index} title={product.title} fileUrl={product.fileUrl} price={product.price} index={index}
                                         deleteItem={deleteItem} />
                                 ))
-                                ) : ( <p>Sin productos</p> )
+                                ) : (<p>Sin productos</p>)
                                 }
 
                             </div>
@@ -90,7 +92,9 @@ function Order({ closeModal }) {
                                         </div>
 
                                         <div className="mt-5 is-container-button">
-                                            <button className="button bg-button-modal-buy " >Comprar ahora</button>
+                                            <Link to="/buy" className="button bg-button-buy" onClick={closeModal}>
+                                                Comprar ahora
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +120,7 @@ function Order({ closeModal }) {
                                     <ItemOrder key={index} title={product.title} fileUrl={product.fileUrl} price={product.price} index={index}
                                         deleteItem={deleteItem} />
                                 ))
-                                ) : ( <p>Sin producto</p> )
+                                ) : (<p>Sin producto</p>)
                                 }
 
                             </div>
@@ -139,7 +143,9 @@ function Order({ closeModal }) {
                                             <p className="has-text-black is-size-5">${priceTotal}</p>
                                         </div>
                                         <div className="mt-5 button-mobile-buy ">
-                                            <button className="button bg-button-modal-buy"  >Comprar ahora </button>
+                                            <Link to="/buy" className="button bg-button-buy" onClick={closeModal} >
+                                                Comprar ahora
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
